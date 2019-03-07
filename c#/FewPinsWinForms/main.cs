@@ -25,6 +25,8 @@ namespace FewPinsWinForms
                 lbLog.Items.Add("Pairing already running");
             else
             {
+                lbLog.Items.Clear();
+
                 Int32 Res = Manager.Open();
                 if (Res != wclErrors.WCL_E_SUCCESS)
                     lbLog.Items.Add("Unable to open Bluetooth Manager: 0x" + Res.ToString("X8"));
