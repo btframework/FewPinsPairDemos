@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewPinsWinForms", "FewPinsWinForms\FewPinsWinForms.csproj", "{1834808A-0EF6-4138-919F-52F1DEAB1A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewPinsConsole", "FewPinsConsole\FewPinsConsole.csproj", "{C0BF823F-2583-481B-AB37-D97F3074AAE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1834808A-0EF6-4138-919F-52F1DEAB1A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1834808A-0EF6-4138-919F-52F1DEAB1A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1834808A-0EF6-4138-919F-52F1DEAB1A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1834808A-0EF6-4138-919F-52F1DEAB1A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BF823F-2583-481B-AB37-D97F3074AAE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BF823F-2583-481B-AB37-D97F3074AAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BF823F-2583-481B-AB37-D97F3074AAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BF823F-2583-481B-AB37-D97F3074AAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
