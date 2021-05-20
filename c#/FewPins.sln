@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewPinsWinForms", "FewPinsWinForms\FewPinsWinForms.csproj", "{1834808A-0EF6-4138-919F-52F1DEAB1A89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewPinsConsole", "FewPinsConsole\FewPinsConsole.csproj", "{C0BF823F-2583-481B-AB37-D97F3074AAE2}"
