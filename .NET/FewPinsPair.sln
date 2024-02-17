@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewPinsPairWinFormsCSharp",
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FewPinsPairConsoleVb", "vb.net\Console\FewPinsPairConsoleVb.vbproj", "{81C58319-16AF-419C-BB47-5731477D12E2}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FewPinsPairWinFormsVb", "vb.net\WinForms\FewPinsPairWinFormsVb.vbproj", "{C58A75F1-5552-4DF5-B94C-4DE0DE9FAE69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Any CPU = Release|Any CPU
@@ -20,6 +22,8 @@ Global
 		{1834808A-0EF6-4138-919F-52F1DEAB1A89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81C58319-16AF-419C-BB47-5731477D12E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81C58319-16AF-419C-BB47-5731477D12E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58A75F1-5552-4DF5-B94C-4DE0DE9FAE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58A75F1-5552-4DF5-B94C-4DE0DE9FAE69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
