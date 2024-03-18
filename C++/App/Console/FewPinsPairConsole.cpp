@@ -40,6 +40,9 @@ private:
 	void Manager_OnAuthenticationCompleted(void* Sender, CwclBluetoothRadio* const Radio,
 		const __int64 Address, const int Error)
 	{
+		UNREFERENCED_PARAMETER(Sender);
+		UNREFERENCED_PARAMETER(Radio);
+
 		if (Address != DEVICE_MAC)
 			wcout << L"Pairing with unknown device " << hex << Address << L" completed with result: 0x" << Error << dec << endl;
 		else
@@ -139,6 +142,7 @@ public:
 			// Do not forget to close Bluetooth Manager.
 			Manager->Close();
 			__unhook(Manager);
+			delete Manager;
 		}
 	}
 };
