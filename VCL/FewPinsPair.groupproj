@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7E1CC9C1-D338-4BF6-8E58-A3BF6700D8E1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CBuilder\Console\FewPinsPairConsoleCBuilder.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CBuilder\VCL\FewPinsPairVclCBuilder.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi\Console\FewPinsPairConsoleDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi\VCL\FewPinsPairVclDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FewPinsPairConsoleCBuilder">
+        <MSBuild Projects="CBuilder\Console\FewPinsPairConsoleCBuilder.cbproj"/>
+    </Target>
+    <Target Name="FewPinsPairConsoleCBuilder:Clean">
+        <MSBuild Projects="CBuilder\Console\FewPinsPairConsoleCBuilder.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FewPinsPairConsoleCBuilder:Make">
+        <MSBuild Projects="CBuilder\Console\FewPinsPairConsoleCBuilder.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="FewPinsPairVclCBuilder">
+        <MSBuild Projects="CBuilder\VCL\FewPinsPairVclCBuilder.cbproj"/>
+    </Target>
+    <Target Name="FewPinsPairVclCBuilder:Clean">
+        <MSBuild Projects="CBuilder\VCL\FewPinsPairVclCBuilder.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FewPinsPairVclCBuilder:Make">
+        <MSBuild Projects="CBuilder\VCL\FewPinsPairVclCBuilder.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="FewPinsPairConsoleDelphi">
+        <MSBuild Projects="Delphi\Console\FewPinsPairConsoleDelphi.dproj"/>
+    </Target>
+    <Target Name="FewPinsPairConsoleDelphi:Clean">
+        <MSBuild Projects="Delphi\Console\FewPinsPairConsoleDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FewPinsPairConsoleDelphi:Make">
+        <MSBuild Projects="Delphi\Console\FewPinsPairConsoleDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FewPinsPairVclDelphi">
+        <MSBuild Projects="Delphi\VCL\FewPinsPairVclDelphi.dproj"/>
+    </Target>
+    <Target Name="FewPinsPairVclDelphi:Clean">
+        <MSBuild Projects="Delphi\VCL\FewPinsPairVclDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FewPinsPairVclDelphi:Make">
+        <MSBuild Projects="Delphi\VCL\FewPinsPairVclDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FewPinsPairConsoleCBuilder;FewPinsPairVclCBuilder;FewPinsPairConsoleDelphi;FewPinsPairVclDelphi"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FewPinsPairConsoleCBuilder:Clean;FewPinsPairVclCBuilder:Clean;FewPinsPairConsoleDelphi:Clean;FewPinsPairVclDelphi:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FewPinsPairConsoleCBuilder:Make;FewPinsPairVclCBuilder:Make;FewPinsPairConsoleDelphi:Make;FewPinsPairVclDelphi:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
