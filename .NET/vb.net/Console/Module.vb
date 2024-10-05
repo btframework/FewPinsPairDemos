@@ -9,7 +9,7 @@
 
     Sub Main()
         ' Switch to "console synchronization mode".
-        wclMessageBroadcaster.SetSyncMethod(wclMessageSynchronizationKind.skThread)
+        wclMessageBroadcaster.SetMessageProcessingMethod(wclMessageProcessingMethod.mpAsync)
 
         Dim Manager As wclBluetoothManager = New wclBluetoothManager()
         AddHandler Manager.OnPinRequest, AddressOf Manager_OnPinRequest

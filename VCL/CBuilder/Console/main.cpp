@@ -67,7 +67,7 @@ public:
 	void Run()
 	{
 		// Switch to "console synchronization mode".
-		TwclMessageBroadcaster::SetSyncMethod(skThread);
+		TwclMessageBroadcaster::SetMessageProcessingMethod(mpAsync);
 
 		TwclBluetoothManager* Manager = new TwclBluetoothManager(NULL);
 		Manager->OnPinRequest = Manager_OnPinRequest;
