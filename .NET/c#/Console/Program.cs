@@ -18,10 +18,8 @@ namespace FewPinsConsole
 
         static void Main(string[] args)
         {
-            // Switch to "console synchronization mode".
-            wclMessageBroadcaster.SetMessageProcessingMethod(wclMessageProcessingMethod.mpAsync);
-
             wclBluetoothManager Manager = new wclBluetoothManager();
+            Manager.MessageProcessing = wclMessageProcessingMethod.mpAsync;
             Manager.OnPinRequest += new wclBluetoothPinRequestEvent(Manager_OnPinRequest);
             Manager.OnAuthenticationCompleted += new wclBluetoothDeviceResultEvent(Manager_OnAuthenticationCompleted);
 

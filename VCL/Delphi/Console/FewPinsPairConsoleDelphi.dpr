@@ -71,9 +71,8 @@ var
   i: Integer;
 begin
   // Switch to "console synchronization mode".
-  TwclMessageBroadcaster.SetMessageProcessingMethod(mpAsync);
-
   Manager := TwclBluetoothManager.Create(nil);
+  Manager.MessageProcessing := mpAsync;
   Manager.OnPinRequest := Manager_OnPinRequest;
   Manager.OnAuthenticationCompleted := Manager_OnAuthenticationCompleted;
 

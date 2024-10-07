@@ -67,9 +67,8 @@ public:
 	void Run()
 	{
 		// Switch to "console synchronization mode".
-		TwclMessageBroadcaster::SetMessageProcessingMethod(mpAsync);
-
 		TwclBluetoothManager* Manager = new TwclBluetoothManager(NULL);
+		Manager->MessageProcessing = mpAsync;
 		Manager->OnPinRequest = Manager_OnPinRequest;
 		Manager->OnAuthenticationCompleted = Manager_OnAuthenticationCompleted;
 

@@ -62,9 +62,8 @@ public:
 	void Run()
 	{
 		// Switch to "console synchronization mode".
-		CwclMessageBroadcaster::SetMessageProcessingMethod(mpAsync);
-		
 		CwclBluetoothManager* Manager = new CwclBluetoothManager();
+		Manager->MessageProcessing = mpAsync;
 		__hook(&CwclBluetoothManager::OnPinRequest, Manager, &CTestApp::Manager_OnPinRequest);
 		__hook(&CwclBluetoothManager::OnAuthenticationCompleted, Manager, &CTestApp::Manager_OnAuthenticationCompleted);
 		

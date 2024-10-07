@@ -8,13 +8,11 @@
     Private PinIndex As Integer
 
     Sub Main()
-        ' Switch to "console synchronization mode".
-        wclMessageBroadcaster.SetMessageProcessingMethod(wclMessageProcessingMethod.mpAsync)
-
         Dim Manager As wclBluetoothManager = New wclBluetoothManager()
         AddHandler Manager.OnPinRequest, AddressOf Manager_OnPinRequest
         AddHandler Manager.OnAuthenticationCompleted, AddressOf Manager_OnAuthenticationCompleted
 
+        Manager.MessageProcessing = wclMessageProcessingMethod.mpAsync
         Dim Res As Int32 = Manager.Open()
         If Res <> wclErrors.WCL_E_SUCCESS Then
             Console.WriteLine("Unale to open Bluetooth Manager: 0x" + Res.ToString("X8"))
